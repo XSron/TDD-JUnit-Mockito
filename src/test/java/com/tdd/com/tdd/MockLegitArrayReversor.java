@@ -32,5 +32,6 @@ public class MockLegitArrayReversor {
 		int[] expecteds = {9,5,4,0,3,1}; 
 		int[] actuals = arrayReversor.reverseArray(flattenerService.flattenArray(arrayInput));
 		assertArrayEquals(expecteds, actuals);
+		verify(flattenerService).flattenArray(arrayInput);
 	}
 }

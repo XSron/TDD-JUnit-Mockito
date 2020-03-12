@@ -1,8 +1,7 @@
 package com.tdd.com.tdd;
 
 import static org.junit.Assert.*;
-import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.when;
+import static org.mockito.Mockito.*;
 
 import org.junit.After;
 import org.junit.Before;
@@ -33,5 +32,6 @@ public class MockNullArrayReversor {
 		int[] expecteds = null;
 		int[] actuals = arrayReversor.reverseArray(flattenerService.flattenArray(arrayInput));
 		assertArrayEquals(expecteds, actuals);
+		verify(flattenerService).flattenArray(arrayInput);
 	}
 }
